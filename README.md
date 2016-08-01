@@ -133,11 +133,83 @@ Wouldn't *no architecture* be the best architecture?
 
 The point is that no matter how good you are, you *will* get it wrong some of the time and some requirements *will* change. The goal is not to prevent architectural changes but to make them as easy as possible. So, what decisions do you *need* to make that cannot be sensibly delayed?
 
+#### Anatomy of a web application
+
+Every web application has a **backend** server which provides the **frontend** (a browser) with a *view* and some *data*. 
+
+The **view** typically consists of HTML for layout, CSS for presentation and JS for behavior. There are exceptions. In fact, there are so many alternatives that it warrants a section in and of itself. At the system level, it is sufficient to remember that the browser receives a view from the server and somehow renders it into a web page.
+
+In a **static** web application, **data** is *embedded* in the view by the server and fully rendered to HTML before it is sent to the client. Each time you want new data, you refresh the page. Very little *client-side scripting* is necessary to display the page. Static web pages are good in scenarios where the browser is slow or the data doesn't change much. An example of this is your yearly tax report. That said, most use cases for a static website can also be implemented dynamically, which offers several advantages.
+
+**Dynamic** web applications send the view and data to the client separately. The *browser* combines the two with scripting and generates the complete HTML. While this is slightly more work for the client, it has many advantages:
+
+- Reduced server load thanks to client-side rendering
+- Separation of data and presentation
+- The same data can be used in multiple views
+- The browser does not need to refresh when requesting/submitting data
+- Requests are smaller and faster
+
+The choice between static and dynamic web pages may rule out certain technologies. It is therefore a choice that you should make in the architecture phase. Today, dynamic web pages are the gold standard. Nearly all modern technologies are aimed at dynamic content and its community is much larger. You need a *really* good reason to choose a static application. If you have an example of such a reason, please put it here!
+
+#### Data exchange
+
+On the web, clients talk to the server by doing HTTP requests to URLs. URLs conform to a certain *architectural style*. Requests and responses may contain data in some *data format*.
+
+The most common **architectural style** is REST, which uses the path section of URLs to access named resources through a stateless interface. Other options are websockets or SOAP. One example where REST is not ideal is controlling physical machinery where the server is inherently stateful. Modeling state transitions (which are generally verbs) on top of REST can be cumbersome; RPC-style websockets are much more convenient in that situation.
+
+If you did not pick SOAP, you can also choose a **data format**. Since the client is generally written in JavaScript, *JSON* is most common and easiest format to deal with. For certain types of data, you might choose *plain text*. *XML* also has a [great past](https://www.google.com/trends/explore#q=json%2C%20xml&cmpt=q&tz=Etc%2FGMT-2), but has been losing traction due to its verbosity and ambiguity with sequences and plain text nodes. It's still quite popular in enterprises for legacy reasons.
+
+For both XML and JSON, there are **schema specification formats** which describe the data model. These models specify e.g. which parameters are required and which are optional, minimal and maximal values, etc. These specifications can be really useful for *code generation* when multiple 
+parties produce and consume the same messages.
+
+Data exchange can be mixed and matched if necessary. It is not a critical choice by itself, but some languages and frameworks have better support for certain styles and data formats. Choosing a specific format might influence your decisions later on. 
+
 #### Monolith vs Microservices
 
-This is a decision that influences most technological choices as well as the integration and release cycle. There are those that consider microservices as the only way forward, but that is not 
-necessarily the case. The truth is, monoliths are often a simpler solution to the same problem. 
+This is a decision that influences most technological choices as well as the integration and release cycle. There are those that consider microservices the only way forward, but [monoliths are simpler as long as you can manage the complexity](http://martinfowler.com/bliki/MicroservicePremium.html). An MVP is generally not complex enough to warrant a microservices architecture by itself. The question becomes: do you think you will need it later? 
 
+There are ways to [start with a monolith and expand it to a microservices architecture later](http://martinfowler.com/bliki/MonolithFirst.html). An example is to gradually split off services from the monolith and rewrite them as microservices. As long as the monolith was designed with stateless behavior in mind, a HTTP proxy can redirect relevant traffic to the new service and everything still works as before. Over time the monolith will shrink and the new architecture will take over. 
 
+Choosing a simple start with a migration path to a more complex future is *still* a decision, but it is a *flexible* decision.
 
-#### TO BE CONTINUED...
+#### Data storage
+At some point your application likely needs to store data. Here are your options.
+
+- Cache (volatile)
+- SQL database
+- NoSQL database
+- Filesystem
+
+###### TO BE CONTINUED...
+
+#### Languages
+
+#### Server-side frameworks
+
+#### Client-side frameworks
+More of a "how to find the right framework" instead of "what is the right framework".
+
+- Funny quotes
+- TodoMvc
+- Framework benchmarks
+- Technology radar
+
+#### Folder structures
+Sort by topic
+
+#### Version control
+Simple. Learn git, and then use it.
+
+#### Deployment infrastructure
+Jenkins, containers, cloud vs physical.
+
+## Design and implementation
+You have made the necessary architectural choices and are now ready for the next phase: installing and configuring all the tools, designing the features and implementing the solution. 
+
+This guide can't hold your hand forever. If you have any question about web technologies, chances are someone has already posted it on StackOverflow. In fact, even if you already know the answer, it's still good to go there and see what other people think. The web is a moving target, and you do yourself a disservice by assuming you already know everything!
+
+## Education
+Resources on Coursera etc.
+
+## About
+Notes about me
