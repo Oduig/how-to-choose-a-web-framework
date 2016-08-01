@@ -20,7 +20,7 @@ Full of energy, you get started.
 
 ## Introduction
 
-This is the definitive guide on *how to bootstrap a full-featured commercial website*.
+This is the definitive guide on *how to make a full-featured website from scratch*.
 
 The **scope** is limited to websites where most of the above requirements are important.
 If you just want a page for your local book club, you *could* follow this guide,
@@ -69,13 +69,11 @@ The goal of a process is to coordinate the team, track the progress towards your
 You probably want to choose some sort of Agile framework like *Scrum* or *Kanban*. Decide which one is best for you.
 Although *Waterfall* is often frowned at, it can still be the best choice if applied correctly.
 More important that the framework is a correct **approach** to building your new product.
-```
-If product development is a drag race,
-using the wrong approach is driving really fast in a random direction.
-```
+
+> If product development is a drag race, using the wrong approach is driving really fast in a random direction.
 
 Many greenfield projects have a limited budget to prove their value. If they can't, the project gets cancelled.
-Each project functions like a start-up, and the unfortunate truth is that [90% of new products fail](](http://fortune.com/2014/09/25/why-startups-fail-according-to-their-founders/)).
+Each project functions like a start-up, and the unfortunate truth is that [90% of new products fail](http://fortune.com/2014/09/25/why-startups-fail-according-to-their-founders/). 
 By far the biggest cause of failure is a lack of **product-market fit**. No matter how much effort went into the business case,
 you only *really* know a product works when the money starts rolling in.
 To reach that milestone as soon as possible, consider the following development **phases**.
@@ -109,9 +107,37 @@ Conceptualize new features, judge their added value, build the features and vali
 to formulate objective **metrics** to determine whether or not a feature has merit. If it does not, be
 ruthless and remove them from the product. After all, they have a maintenance cost but bring no added value.
 
+## Analyzing the requirements
+Now that you know what you are building, it's time to take another look at the **requirements**. Start with an empty page and write down those things that actually apply to *your* product. 
+All the requirements above should automatically translate into meaningful trade-offs. Since it's rather hard to generalize, here are some examples:
+
+- Are the users technically capable to update their browsers? No: support IE6 but consider dropping the rich client. Yes: limit yourself to *evergreen* browsers, 
+  use *feature detection* and show a friendly notice if the user is too far behind the curve.
+- Will you go bankrupt if the website is hacked? Yes: hire a security expert for advice.
+- Will people die if the website goes down? No: 99% uptime is probably good enough. Perhaps you can tolerate additional downtime at night.
+ 
+**Technical choices** like HTML5, REST and microservices should not be included in the requirements, unless your users are software developers or systems administrators. These 
+choices should be made (or not made) in the architecture phase. 
+
 ## Product architecture
 
 Once you reach the *MVP* phase, your decisions affect the long-term value and maintainability of the software.
-This is where the **architecture** really begins.
+This is where you start looking at the **architecture**. There are many ways to define a good architecture, for example:
+
+> A good architecture maximizes the number of decisions *not* made. - Robert "Uncle Bob" Martin
+
+> To make decisions revocable you need to design for flexibility. - Martin Fowler
+
+It sounds counter-intuitive. Isn't the job of an architect to make decisions and get them right the first time? 
+Wouldn't *no architecture* be the best architecture?
+
+The point is that no matter how good you are, you *will* get it wrong some of the time and some requirements *will* change. The goal is not to prevent architectural changes but to make them as easy as possible. So, what decisions do you *need* to make that cannot be sensibly delayed?
+
+#### Monolith vs Microservices
+
+This is a decision that influences most technological choices as well as the integration and release cycle. There are those that consider microservices as the only way forward, but that is not 
+necessarily the case. The truth is, monoliths are often a simpler solution to the same problem. 
+
+
 
 #### TO BE CONTINUED...
