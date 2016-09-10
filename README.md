@@ -2,9 +2,9 @@
 The word is in. Someone has formulated a master plan to conquer the market.
 Their first step is to reach as many users as possible,
 for as small an effort as possible. They have chosen the most portable and
-most widespread platform *in the world*: the web.
+most widespread platform in the world: *the web*.
 
-Eager to start on a greenfield project, you take the bag of money and get started.
+Eager to start on a greenfield project, you accept a bag of money and get started.
 Here are the requirements:
 
 - The site should work in **all browsers**, including Safari, Opera and IE6.
@@ -20,11 +20,11 @@ Full of energy, you get started.
 
 ## Introduction
 
-This is the definitive guide on *how to make a full-featured website from scratch*.
+This is an opinionated guide on *how to make a full-featured website from scratch*.
 
 The **scope** is limited to websites where most of the above requirements are important.
 If you just want a page for your local book club, you *could* follow this guide,
-but a blogging platform like Wordpress would likely suit you better. The assumption is that your website is special and needs to be custom-built by real
+but a website builder or blogging platform like Wordpress would likely suit you better. The assumption is that your website is special and needs to be custom-built by real
 software engineers. You are one of those software engineers. You already know the basic building blocks of the web, and seek help with the alarming
 number of choices you face before you can deliver your first feature.
 
@@ -42,9 +42,8 @@ Back to your project. Before you start any software project,
 regardless of what anyone tells you, there are a few things you must do.
 
 #### Understand the problem
-If you are going to make technology choices and a system-level architecture, you should start with understanding the problem.
- Quite often, companies make initial assumptions for estimation and quotation purposes. That's normal. It will help you to know
- what those assumptions were so you can provide insight from your technical point of view.
+If you are going to make technology choices and a system-level architecture, you should start by understanding the problem.
+Quite often, companies make technological assumptions early in the project to come up with good cost/time estimations. That's normal. It definitely helps if you know what those assumptions were so you can provide insight from your technical point of view.
 
 You could use the following checklist, and add questions of your own.
 
@@ -68,14 +67,12 @@ The goal of a process is to coordinate the team, track the progress towards your
 
 You probably want to choose some sort of Agile framework like *Scrum* or *Kanban*. Decide which one is best for you.
 Although *Waterfall* is often frowned at, it can still be the best choice if applied correctly.
-More important that the framework is a correct **approach** to building your new product.
-
-> If product development is a drag race, using the wrong approach is driving really fast in a random direction.
+More important that the framework is a correct **approach**. You may develop software in an agile way and faster than anyone else, but if you're going in a random direction you won't get anywhere.
 
 Many greenfield projects have a limited budget to prove their value. If they can't, the project gets cancelled.
 Each project functions like a start-up, and the unfortunate truth is that [90% of new products fail](http://fortune.com/2014/09/25/why-startups-fail-according-to-their-founders/). 
 By far the biggest cause of failure is a lack of **product-market fit**. No matter how much effort went into the business case,
-you only *really* know a product works when the money starts rolling in.
+you only *really* know it's good when the users come in, stay and the money starts rolling.
 To reach that milestone as soon as possible, consider the following development **phases**.
 
 1. Conceptualization
@@ -90,10 +87,10 @@ A **prototype** is a hacky, ugly, barely-there version of the software.
 The purpose of a prototype is to **validate** the core business case with real users.
  A prototype can be made with pen and paper, wireframing tools, or actual code.
 If you choose code, you should write it as fast as possible, without maintenance or
-performance in mind. That way it can be built many times faster than a production-ready MVP.
+performance in mind. That way, it can be built many times faster than a production-ready MVP.
 
 Prototypes are meant to be **discarded** after they serve their purpose. It was not built with
- maintenance in mind, and those who try building an MVP on top of it will tell you it's a nightmare. Keep in mind that the
+ maintenance in mind, and those who tried building an MVP on top of a prototype will tell you it was a nightmare. Keep in mind that the
  real value of the prototype was to validate the business case and to gain information, not to develop the product.
  If you have any doubt that the prototype will be discarded, *don't make one* and skip to the MVP.
 
@@ -121,8 +118,8 @@ choices should be made (or not made) in the architecture phase.
 
 ## Product architecture
 
-Once you reach the *MVP* phase, your decisions affect the long-term value and maintainability of the software.
-This is where you start looking at the **architecture**. There are many ways to define a good architecture, for example:
+Once you reach the *MVP* phase, your decisions affect the long-term value and maintainability of the product.
+This is where you start looking at the **architecture**. There are many ways to define a good architecture. Some related quotes:
 
 > A good architecture maximizes the number of decisions *not* made. - Robert "Uncle Bob" Martin
 
@@ -153,7 +150,7 @@ The choice between static and dynamic web pages may rule out certain technologie
 
 #### Data exchange
 
-On the web, clients talk to the server by doing HTTP requests to URLs. URLs conform to a certain *architectural style*. Requests and responses may contain data in some *data format*.
+On the web, clients talk to the server by sending HTTP requests to URLs. URLs conform to a certain *architectural style*. Requests and responses may contain data in some *data format*.
 
 The most common **architectural style** is REST, which uses the path section of URLs to access named resources through a stateless interface. Other options are websockets or SOAP. One example where REST is not ideal is controlling physical machinery where the server is inherently stateful. Modeling state transitions (which are generally verbs) on top of REST can be cumbersome; RPC-style websockets are much more convenient in that situation.
 
@@ -169,8 +166,6 @@ Data exchange can be mixed and matched if necessary. It is not a critical choice
 This is a decision that influences most technological choices as well as the integration and release cycle. There are those that consider microservices the only way forward, but [monoliths are simpler as long as you can manage the complexity](http://martinfowler.com/bliki/MicroservicePremium.html). An MVP is generally not complex enough to warrant a microservices architecture by itself. The question becomes: do you think you will need it later? 
 
 There are ways to [start with a monolith and expand it to a microservices architecture later](http://martinfowler.com/bliki/MonolithFirst.html). An example is to gradually split off services from the monolith and rewrite them as microservices. As long as the monolith was designed with stateless behavior in mind, a HTTP proxy can redirect relevant traffic to the new service and everything still works as before. Over time the monolith will shrink and the new architecture will take over. 
-
-Choosing a simple start with a migration path to a more complex future is *still* a decision, but it is a *flexible* decision.
 
 #### Data storage
 At some point your application likely needs to store data. Here are your options.
