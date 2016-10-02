@@ -1,5 +1,4 @@
 # Product architecture
----
 
 Once you reach the *MVP* phase, your decisions affect the long-term value and maintainability of the product.
 This is where you start looking at the **architecture**. There are many ways to define a good architecture. Some related quotes:

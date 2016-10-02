@@ -1,5 +1,5 @@
 # Futurology
----
+
 Looking at trends over the last couple of years, we can make some predictions about where the web is going.
 
 ### Other languages in the browser

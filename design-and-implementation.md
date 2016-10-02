@@ -1,5 +1,4 @@
 # Design and implementation
----
 
 You have made the necessary architectural choices and are now ready for the next phase: installing and configuring all the tools, designing the features and implementing the solution. 
 

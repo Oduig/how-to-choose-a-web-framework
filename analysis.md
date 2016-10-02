@@ -1,5 +1,5 @@
 # Before you start
----
+
 Before you start any software project,
 regardless of what anyone tells you, there are a few things you must do.
 
