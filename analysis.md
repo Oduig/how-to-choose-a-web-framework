@@ -1,40 +1,39 @@
 # Before you start
 
-Before you start any software project,
-regardless of what anyone tells you, there are a few things you must do.
+Before you start any new software project, regardless of what anyone tells you, there are a few things you must do.
 
 ## Understand the problem
 If you are going to make technology choices and a system-level architecture, you should start by understanding the problem.
-Quite often, companies make technological assumptions early in the project to come up with good cost/time estimations. That's normal. It definitely helps if you know what those assumptions were so you can provide insight from your technical point of view.
+Quite often, companies make technological assumptions early in the project to come up with good cost/time estimations. That's normal. It definitely helps if you know what those assumptions were so you can gain insight from your technical point of view.
 
 You could use the following checklist, and add questions of your own.
 
-- What was the *problem* that led to the decision of building a new website?
+- What was the *problem* that led to the decision of building a website?
 - Who are the *users*?
 - What do they *need*?
 - Who are the other *stakeholders*?
 - What exactly did they *ask* for?
 - Is a website indeed the right solution?
-- Does it indeed need to be a *custom-built* website?
+- Does it need to be completely *custom-built*?
 - What is the *cost* and *merit* of the proposal?
 
-If you raise even one doubt with these questions, don't skip over them.
+If you raise any doubt with these questions, don't skip over them.
 Use the [5 Whys](https://en.wikipedia.org/wiki/5_Whys) or similar techniques.
 You want to build something that lasts, and to do that you need to figure out *what is important, and what is not*.
 Which brings us to the process.
 
-## Understand the approach
+## Choose a process
 If there is no process in place yet, great! You can create one.
 The goal of a process is to coordinate the team, track the progress towards your goal and to minimize risk.
 
-You probably want to choose some sort of Agile framework like *Scrum* or *Kanban*. Decide which one is best for you.
-Although *Waterfall* is often frowned at, it can still be the best choice if applied correctly.
-More important that the framework is a correct **approach**. You may develop software in an agile way and faster than anyone else, but if you're going in a random direction you won't get anywhere.
+You probably want to choose some sort of [Agile](https://en.wikipedia.org/wiki/Agile_software_development) framework like [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)) or [Kanban](https://en.wikipedia.org/wiki/Kanban_(development)). Decide which one is best for you.
+Although [Waterfall](https://en.wikipedia.org/wiki/Waterfall_model) is often frowned upon, it *can* be the best approach if applied correctly.
+More important that the framework is a correct **approach**. You might be agile and coding faster than anyone else, but if you're going in a random direction you won't get anywhere.
 
 Many greenfield projects have a limited budget to prove their value. If they can't, the project gets cancelled.
 Each project functions like a start-up, and the unfortunate truth is that [90% of new products fail](http://fortune.com/2014/09/25/why-startups-fail-according-to-their-founders/). 
-By far the biggest cause of failure is a lack of **product-market fit**. No matter how much effort went into the business case,
-you only *really* know it's good when the users come in, stay and the money starts rolling.
+By far the biggest cause of failure is a lack of [product-market fit](https://en.wikipedia.org/wiki/Product/market_fit). No matter how much effort went into the business case,
+you only *really* know it's good when the users come in, stay in, and start generating revenue.
 To reach that milestone as soon as possible, consider the following development **phases**.
 
 1. Conceptualization
@@ -66,7 +65,7 @@ Conceptualize new features, judge their added value, build the features and vali
 to formulate objective **metrics** to determine whether or not a feature has merit. If it does not, be
 ruthless and remove them from the product. After all, they have a maintenance cost but bring no added value.
 
-## Analyzing the requirements
+## Analyze the requirements
 Now that you know what you are building, it's time to take another look at the **requirements**. Start with an empty page and write down those things that actually apply to *your* product. 
 All the requirements above should automatically translate into meaningful trade-offs. Since it's rather hard to generalize, here are some examples:
 

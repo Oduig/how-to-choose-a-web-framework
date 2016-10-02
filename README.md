@@ -23,9 +23,9 @@ Full of energy, you get started.
 
 This is an opinionated guide on *how to choose your web technologies*. 
 
-The **added value** of this guide is that it does not tell you *what* to choose, it tells you *how* to choose. Most existing comparisons between web technologies are narrowly focused and biased. In order to make an informed decision, you need to look at many of them and combine their results into a reliable conclusion. In a way, this guide is a modern version of a [systematic review](https://en.wikipedia.org/wiki/Systematic_review).
+The **added value** of this guide is that it does not tell you *what* to choose, it tells you *how* to choose. Most existing comparisons between web technologies are narrowly focused and biased. In order to make an informed decision, you need to look at many of them and combine their results into a reliable conclusion. In a way, this guide is the modern equivalent of a [systematic review](https://en.wikipedia.org/wiki/Systematic_review).
 
-The truth is, you can be almost guaranteed that some of your choices will be obsolete in 5 years. The upside is that if you read all of this, you know why you made the decision and you have already thought about your migration options.
+The truth is, the web is a moving platform. You can be almost guaranteed that some of your choices will be obsolete in 5 years. The upside is that if you read all of this, you'll know why you made your decision and you'll have already thought about your migration options.
 
 The **scope** is limited to websites where many of the above concerns are applicable.
 If you just want a page for your local book club, you are probably better off using a website builder or blogging platform like Wordpress. The assumption is that your website is special and needs to be custom-built by real
@@ -36,8 +36,8 @@ software engineers. You are one of those software engineers. You already know th
 
 1. [Before you start](./analysis.md)
 	1. [Understand the problem](./analysis.md#understand-the-problem)
-	2. [Take a good approach](./analysis.md#take-a-good-approach)
-	3. [Analyzing the requirements](./analysis.md#requirements.md)
+	2. [Choose a process](./analysis.md#choose-a-process)
+	3. [Analyze the requirements](./analysis.md#analyze-the-requirements)
 3. [Architecture](./architecture.md)
 	1. [Anatomy of a web application](./architecture.md#anatomy-of-a-web-application)
 	2. [Data exchange](./architecture.md#data-exchange)
@@ -53,7 +53,7 @@ software engineers. You are one of those software engineers. You already know th
 
 
 ## About
-I am a software engineer and full-stack web developer at a consultancy bureau in Eindhoven, The Netherlands. Lately, we see more and more customers coming our way asking for experience in web technology, and we wanted to expand our knowledge in the area. We hope to use this article as a framework (no pun intended) for future web projects and new developers.
+I am a full-stack web engineer at a software consultancy bureau in Eindhoven, The Netherlands. Lately, we see more and more customers asking for experience in web technology and we wanted to expand our knowledge in the area. We hope to use this article as a framework (pun intended) for future web projects and new developers.
 
 #### Contributing
 I am just one voice in a very big crowd, and I cannot be an expert on *all* of the discussed topics. I encourage you to share different views. Feel free to submit pull requests for additions, clarifications, grammar fixes or any sort of change in general that you think would improve the text. If this resonates with a lot of people,
