@@ -1,9 +1,9 @@
-## Before you start
-
+# Before you start
+---
 Before you start any software project,
 regardless of what anyone tells you, there are a few things you must do.
 
-#### Understand the problem
+## Understand the problem
 If you are going to make technology choices and a system-level architecture, you should start by understanding the problem.
 Quite often, companies make technological assumptions early in the project to come up with good cost/time estimations. That's normal. It definitely helps if you know what those assumptions were so you can provide insight from your technical point of view.
 
@@ -23,7 +23,7 @@ Use the [5 Whys](https://en.wikipedia.org/wiki/5_Whys) or similar techniques.
 You want to build something that lasts, and to do that you need to figure out *what is important, and what is not*.
 Which brings us to the process.
 
-#### Understand the approach
+## Understand the approach
 If there is no process in place yet, great! You can create one.
 The goal of a process is to coordinate the team, track the progress towards your goal and to minimize risk.
 
@@ -65,3 +65,15 @@ After the MVP, the groundwork is done and the stage is set. The product is ready
 Conceptualize new features, judge their added value, build the features and validate them against real users. Try
 to formulate objective **metrics** to determine whether or not a feature has merit. If it does not, be
 ruthless and remove them from the product. After all, they have a maintenance cost but bring no added value.
+
+## Analyzing the requirements
+Now that you know what you are building, it's time to take another look at the **requirements**. Start with an empty page and write down those things that actually apply to *your* product. 
+All the requirements above should automatically translate into meaningful trade-offs. Since it's rather hard to generalize, here are some examples:
+
+- Are the users technically capable to update their browsers? No: support IE6 but consider dropping the rich client. Yes: limit yourself to *evergreen* browsers, 
+  use *feature detection* and show a friendly notice if the user is too far behind the curve.
+- Will you go bankrupt if the website is hacked? Yes: hire a security expert for advice.
+- Will people die if the website goes down? No: 99% uptime is probably good enough. Perhaps you can tolerate additional downtime at night.
+ 
+**Technical choices** like HTML5, REST and microservices should not be included in the requirements, unless your users are software developers or systems administrators. These 
+choices should be made (or not made) in the architecture phase. 
