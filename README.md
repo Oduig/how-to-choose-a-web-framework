@@ -55,8 +55,8 @@ software engineers. You are one of those software engineers. You already know th
 ## About
 I am a full-stack web engineer at a software consultancy bureau in Eindhoven, The Netherlands. Lately, we see more and more customers asking for experience in web technology and we wanted to expand our knowledge in the area. We hope to use this article as a framework (pun intended) for future web projects and new developers.
 
+Feel free to contact me via GitHub, LinkedIn or find me in the [Slack Slashrocket community](https://slashrocket.slack.com/messages/general/) under the name *jodiug*. 
+
 #### Contributing
 I am just one voice in a very big crowd, and I cannot be an expert on *all* of the discussed topics. I encourage you to share different views. Feel free to submit pull requests for additions, clarifications, grammar fixes or any sort of change in general that you think would improve the text. If this resonates with a lot of people,
 we might even tackle the biggest challenge of them all: keeping a guide on web technology up to date.
-
-

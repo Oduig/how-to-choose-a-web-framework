@@ -96,11 +96,38 @@ The rule of thumb is: it's much easier to pick NoSQL for the wrong reasons, than
 
 ## Frontend
 
-The state of frontend Javascript frameworks has been subject to a lot of ridicule over the past few years.
+The state of frontend JavaScript frameworks has been subject to a lot of ridicule over the past few years. Among the critiques are the article on [JavaScript Fatigue](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.v7962qgfd), [this website](http://www.isaacchansky.me/days-since-last-new-js-framework/) and a [JavaScript drinking game](https://twitter.com/ironshay/status/370525864523743232).
 
-#### TODO funny quotes
+A few quotes really drive the point home.
 
-As of 2016, client-side web frameworks are volatile, but stabilizing. In theory you have hundreds of options, but only a few of them are sufficiently **modern** and **established**.
+```
+#!english
+There are no best practices. There's just different clumps of tech that other people have settled on using.
+```
+
+```
+#!english
+You are in the room of web apps.
+make web app
+You need to select a platform first to make a web app. You see doors named Unity, GameMaker, NW.js, Electron, Cordova, and Browser.
+make web app --browser
+Some languages appear. You see Javascript, Coffescript, Typescript, Clojurescript, Dart, asm.js. Type “more” if you want the list of all the 127 available languages
+make web app --browser --javascript
+Do you mean ES5 or ES6?
+make web app --browser --javascript-es6
+Welcome to the room of transpilers. You see Babel, Traceur or you can hope that the browser already supports the features that you’ll use. Type “more” for a list of transpilers and read the book “Transpiler Tools aka Necronomicon”
+make web app --browser --javascript-es6 --babel
+You arrive in the corridor of Tasks. You see a Grunt in a corner, a Gulp in the other. A Babelify attacks you, Webpacks gather all around. In a nearby room you hear Browserify screaming and fighting with Require.js. In your inventory you have “transpile on save”.
+exit
+You can’t exit because seven rooms ago you chose “npm install node-jsx” and it is not currently compatible with the latest implementation of exit.
+Ctrl + C
+A Yeoman glows in an alcove nearby. In your hand you have npm but your project.json is broken. On the floor you also see Gruntfile, .jshintrc, .babelrc and tsconfig.json. You hear a Broccoli and a Jasmine howling in the distance.
+rm -rf /
+```
+
+#### State-of-the-art
+
+As of 2016, client-side web frameworks are still volatile, but stabilizing. In theory you have hundreds of options, but only a few of them are sufficiently **modern** and **established**.
 
 - [Angular 2](http://learnangular2.com/)
 - [EmberJS](http://emberjs.com/)
@@ -121,6 +148,7 @@ Since all modern frontend frameworks use Javascript and they are all rather new,
 - [TodoMVC](http://todomvc.com/) (the same app implemented with different frameworks)
 - [Technology radar](https://www.thoughtworks.com/radar/languages-and-frameworks) (shows how established and future-proof technologies are)
 - [Framework benchmarks](http://www.stefankrause.net/wp/?p=191) (if you have scalability concerns)
+- [Additional benchmarks](https://auth0.com/blog/2016/01/07/more-benchmarks-virtual-dom-vs-angular-12-vs-mithril-js-vs-the-rest/)
 - Some nice comparisons on Youtube: [here](https://www.youtube.com/watch?v=2rD_HuTuXfg) and [here](https://www.youtube.com/watch?v=6I_GwgoGm1w)
 
 #### Browser support
@@ -134,9 +162,11 @@ So far, we have not yet mentioned that Angular 2 uses [TypeScript](https://www.t
 There are other alternative languages, such as [CoffeeScript](http://coffeescript.org/) and [ScalaJS](https://www.scala-js.org/). These are technologically mature, but do have smaller communities. Now that the major players are adopting TypeScript, CoffeeScript is losing popularity. ScalaJS is worth a look, but only really useful if your backend is also written in Scala.
 
 #### Style sheets
-Frameworks tend to stay clear of the visual presentation, and leave it up to [cascading style sheets](https://en.wikipedia.org/wiki/Cascading_Style_Sheets). For CSS, it is advisable to use a precursor like [SASS](http://sass-lang.com/) or [LESS](http://lesscss.org/) to enhance the readability and flexibility of style rules. Much like TypeScript, there is no real downside to using these precursors because the generated CSS can be used directly if the need ever arises.
+Frameworks tend to stay clear of the visual presentation, and leave it up to [cascading style sheets](https://en.wikipedia.org/wiki/Cascading_Style_Sheets). For CSS, it is advisable to use a precursor like [SASS](http://sass-lang.com/) or [LESS](http://lesscss.org/) to enhance the readability and flexibility of style rules. Much like TypeScript, there is no real downside to using these precursors because the generated CSS can be used directly if the need ever arises. 
 
-The many do's and dont's of CSS are beyond the scope of this article. Look up some tutorials in general and take a close look at [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), it may save you some headaches.
+You may also benefit from a theme such as [Bootstrap](https://v4-alpha.getbootstrap.com/) or [Material Design](https://material.google.com/). They provide a sane, consistent layout as a basis for building your app.
+
+The many do's and dont's of CSS are beyond the scope of this article. Look for some tutorials. Take a close look at [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), it may save you some headaches.
 
 #### A note on HTML5
 HTML5 is the latest HTML standard. When people use the term, they often mean *rich client* which implies you are using a client-side MVC framework. When you are actually using HTML5 features, make sure you check the [compatibility list](http://caniuse.com/#search=html5) and you set the right *DOCTYPE*. That's all there is to it.
@@ -164,4 +194,5 @@ Most of your deployment decisions depend on the scope and scale of your applicat
 
 - [Jenkins](https://jenkins.io/) is great for building and scheduling jobs. Version 2 has nice improvements in the scripting department.
 - **Containers** (e.g. [Docker](https://www.docker.com/)) are great if you have to deal with a lot of server configuration.
-- Hosted **cloud servers** are easier to deal with than dedicated hardware, but not always faster and cheaper. Make sure you to compare performance before commiting to one solution.
+- Hosted **cloud servers** are easier to deal with than dedicated hardware, but not always faster and cheaper. Make sure you to compare performance before commiting to one solution. Some options are Azure, Cloud Foundation and Amazon Web Services.
+- In the category "other things to think about", [12factor](http://12factor.net/) has a nice methodology for deploying and distributing web projects.
