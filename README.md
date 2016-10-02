@@ -36,6 +36,11 @@ Feel free to submit pull requests for additions, clarifications, grammar fixes o
 in general that would improve the text. If this resonates with a lot of people,
 we might even tackle the biggest challenge of them all: keeping a guide on web technology up to date.
 
+## Table of contents
+
+1. [Before you start](./businessanalysis)
+2. [FooBar](./businessanalysis/README.md)
+
 ## Before you start
 
 Back to your project. Before you start any software project,
