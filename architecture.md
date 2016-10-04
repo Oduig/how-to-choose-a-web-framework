@@ -146,6 +146,7 @@ Note that **AngularJS** is absent in this list. It has been replaced by *Angular
 Since all modern frontend frameworks use Javascript and they are all rather new, the **familiarity** aspect plays a lesser role. The following resources can be used to further weigh the options.
 
 - [TodoMVC](http://todomvc.com/) (the same app implemented with different frameworks)
+- [State of JS](http://stateofjs.com/2016/introduction/) (various categories, based on large scale developer surveys)
 - [Technology radar](https://www.thoughtworks.com/radar/languages-and-frameworks) (shows how established and future-proof technologies are)
 - [Framework benchmarks](http://www.stefankrause.net/wp/?p=191) (if you have scalability concerns)
 - [Additional benchmarks](https://auth0.com/blog/2016/01/07/more-benchmarks-virtual-dom-vs-angular-12-vs-mithril-js-vs-the-rest/)
