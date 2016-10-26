@@ -1,9 +1,10 @@
 # Before you start
 
-Before you start any new software project, regardless of what anyone tells you, there are a few things you must do.
+Like in every other software project, selecting the right web technologies starts with asking the right questions. Do you understand the problem? Is the proposed solution a good one? Which requirements are crucial, important, desirable or superfluous?
+
+A common problem is that 
 
 ## Understand the problem
-If you are going to make technology choices and a system-level architecture, you should start by understanding the problem.
 Quite often, companies make technological assumptions early in the project to come up with good cost/time estimations. That's normal. It definitely helps if you know what those assumptions were so you can gain insight from your technical point of view.
 
 You could use the following checklist, and add questions of your own.
@@ -14,7 +15,7 @@ You could use the following checklist, and add questions of your own.
 - Who are the other *stakeholders*?
 - What exactly did they *ask* for?
 - Is a website indeed the right solution?
-- Does it need to be completely *custom-built*?
+- Is there no existing tool that can do what you need?
 - What is the *cost* and *merit* of the proposal?
 
 If you raise any doubt with these questions, don't skip over them.
@@ -28,7 +29,7 @@ The goal of a process is to coordinate the team, track the progress towards your
 
 You probably want to choose some sort of [Agile](https://en.wikipedia.org/wiki/Agile_software_development) framework like [Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)) or [Kanban](https://en.wikipedia.org/wiki/Kanban_(development)). Decide which one is best for you.
 Although [Waterfall](https://en.wikipedia.org/wiki/Waterfall_model) is often frowned upon, it *can* be the best approach if applied correctly.
-More important that the framework is a correct **approach**. You might be agile and coding faster than anyone else, but if you're going in a random direction you won't get anywhere.
+More important than the framework is a correct **approach**. You might be agile and coding faster than anyone else, but if you're going in a random direction you won't get anywhere.
 
 Many greenfield projects have a limited budget to prove their value. If they can't, the project gets cancelled.
 Each project functions like a start-up, and the unfortunate truth is that [90% of new products fail](http://fortune.com/2014/09/25/why-startups-fail-according-to-their-founders/). 
@@ -41,8 +42,7 @@ To reach that milestone as soon as possible, consider the following development 
 3. Minimal viable product (MVP)
 4. Iterative growth
 
-The rationale is as follows. **Conceptualization** means understanding a problem and its proposed solution.
-It is likely already done at this point, with or without your help.
+The rationale is as follows. **Conceptualization** means understanding a problem and its proposed solution. You should also look for any competing products. Launching alternatives to existing products is risky. If you do, make sure you do at least one thing [10x better](http://erickimphotography.com/blog/2014/12/29/the-10x-principle-the-only-difference-between-success-and-failure-as-a-photographer/) than anybody else.
 
 A **prototype** is a hacky, ugly, barely-there version of the software.
 The purpose of a prototype is to **validate** the core business case with real users.
