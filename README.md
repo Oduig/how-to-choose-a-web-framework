@@ -1,11 +1,11 @@
 # Untangling the Web
 
-*A quickstart guide to developing web applications.*
+*A quickstart guide to making well-founded design choices for web applications.*
 
 - Documentation
 - Links
 
-## History
+## Motivation
 
 The first public website went online in 1991 at CERN, Switzerland. Since then, the web has come a long way. What used to be a platform for academic information, is now so wide-spread that it has effectively replaced paper.
 
@@ -13,7 +13,15 @@ Traditionally, a website was a place to share and publish static information. Yo
 
 While the web was an application platform at that point, there were some things left to be desired. The three languages of the web: HTML, CSS and JavaScript, were clumsy to work with and standards were lacking. It was very hard to do large-scale, professional applications well. In the early 2010s, that changed with the release of Node.JS and AngularJS. Finally, JavaScript had an ecosystem and applications could be developed in a structured way. This made the web a contender to replace desktop and mobile applications entirely.
 
-Today, browsers are updated regularly, differences between vendors are disappearing and our tools are getting more numerous and powerful. Scarcity has turned into abundance: create a new web application in 2016, and you are faced with an uncomfortable number of technological choices.
+Today, browsers are updated regularly, differences between vendors are disappearing and our tools are getting more numerous and powerful. Scarcity has turned into abundance: create a new web application in 2017, and you are faced with an uncomfortable number of technological choices. Best practices are nowhere to be found. This guide attempts to fill that gap, telling you how to narrow down your options and how to make choices that will last... as long as possible. 
+
+## Scope
+
+The scope of this guide is limited to custom-built web applications. If you just want a page for your local book club, you are probably better off using a website builder or blogging platform like Wordpress. The assumption is that your website is special and needs to be built by software engineers. You are one of those software engineers. You already know the basic building blocks of the web, and seek help with the alarming number of choices you face. You want technologies that get out of your way and let you focus on delivering business value to yourself or your customers.
+
+This is an opinionated guide. It tells you what options there are, which options are good defaults, and how you can make an informed choice for your particular case. Most existing comparisons between web technologies are narrowly focused on one or two web technologies. In order to make an informed decision, you need to look at many different comparisons and combine their results. In a way, this guide does exactly that. It is a systematic review of other people's work.
+
+The truth is, the web is a moving platform. You can be almost guaranteed that some of your choices will be obsolete in 5 years. The upside is that if you read all of this, you'll know why you made your decision and you'll have already thought about your other options. 
 
 ## Table of contents
 
@@ -45,14 +53,6 @@ Today, browsers are updated regularly, differences between vendors are disappear
 2. [Courses](./courses.md)
 3. [Futurology](./futurology.md)
 
-## Scope
-
-The scope of this guide is limited to completely custom-built web pages. If you just want a page for your local book club, you are probably better off using a website builder or blogging platform like Wordpress. The assumption is that your website is special and needs to be built by software engineers. You are one of those software engineers. You already know the basic building blocks of the web, and seek help with the alarming number of choices you face before you can deliver your first feature.
-
-This is an opinionated guide. It tells you what options there are, which options are good defaults, and how you can make an informed choice for your particular case. Most existing comparisons between web technologies are narrowly focused on one or two web technologies. In order to make an informed decision, you need to look at many different comparisons and combine their results. In a way, this guide does exactly that. It is a systematic review of other people's work.
-
-The truth is, the web is a moving platform. You can be almost guaranteed that some of your choices will be obsolete in 5 years. The upside is that if you read all of this, you'll know why you made your decision and you'll have already thought about your other options.
-
 ## Contributing
 It's impossible for one person to be an expert on *all* web-related topics. I encourage you to share different views. Feel free to submit pull requests for additions, clarifications, grammar fixes or any sort of change in general that you think would improve the text. If this resonates with a lot of people,
 we might even tackle the biggest challenge of them all: keeping a guide on web technology up to date.
@@ -61,4 +61,4 @@ we might even tackle the biggest challenge of them all: keeping a guide on web t
 ## Contact
 I am Guido Josquin, a full-stack web engineer at a software consultancy bureau in Eindhoven, The Netherlands. Lately, we see more and more customers asking for experience in web technology and we wanted to expand our knowledge in the area. We hope to use this article as a framework (pun intended) for future web projects and new developers.
 
-Feel free to contact me via GitHub, LinkedIn or Facebook. 
+Feel free to contact me via GitHub or LinkedIn. 
