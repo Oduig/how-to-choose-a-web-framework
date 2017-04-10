@@ -1,10 +1,11 @@
-# Web design?
+# Untangling the Web
 
-## TODO
+*A quickstart guide to developing web applications.*
 
-- Title
 - Documentation
 - Links
+
+## History
 
 The first public website went online in 1991 at CERN, Switzerland. Since then, the web has come a long way. What used to be a platform for academic information, is now so wide-spread that it has effectively replaced paper.
 
