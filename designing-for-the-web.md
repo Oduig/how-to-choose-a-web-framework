@@ -144,7 +144,9 @@ Finally, choose whatever is the most '''familiar'
 ### Data exchange
 On the web, clients talk to the server by sending HTTP requests to URLs. URLs conform to a certain architectural style. Requests and responses may contain data in some data format.
 
-The most common architectural style is [REST], which uses the path section of URLs to access named resources through a stateless interface. Some standards for REST are defined in the [Open API Specification]. If REST does not suffice, other options are [SOAP] and [WebSocket]. One example where REST is not ideal is controlling physical machinery where the server is inherently stateful. Modeling state transitions (which are generally verbs) on top of REST can be cumbersome; RPC-style websockets are much more convenient in that situation.
+The most common architectural style is [REST], which uses the path section of URLs to access named resources through a stateless interface. Some standards for REST are defined in the [Open API Specification]. This specification recommends [Swagger], a tool that can generate interactive documentation, client and server code from an API description.
+
+If REST does not suffice, other options are [SOAP] and [WebSocket]. One example where REST is not ideal is controlling physical machinery where the server is inherently stateful. Modeling state transitions (which are generally verbs) on top of REST can be cumbersome; RPC-style websockets are much more convenient in that situation.
 
 You can also choose a data format. Since the client is generally written in JavaScript, [JSON] is most common and easiest format to deal with. For certain types of data, you might choose plain text. XML also has a [great past], but has been losing traction due to its verbosity and parsing ambiguities (sequences vs plain text nodes, empty nodes). It's still quite popular in enterprises for legacy reasons.
 
@@ -154,6 +156,7 @@ Data exchange can be mixed and matched if necessary. It is not a critical choice
 
   [REST]: https://en.wikipedia.org/wiki/Representational_state_transfer
   [Open API Specification]: https://github.com/OAI/OpenAPI-Specification
+  [Swagger]: http://swagger.io/
   [SOAP]: https://en.wikipedia.org/wiki/SOAP
   [WebSocket]: https://en.wikipedia.org/wiki/WebSocket
   [JSON]: http://www.json.org/
@@ -187,15 +190,13 @@ The rule of thumb is that usually, either choice will work. But it's much easier
 ### Frontend frameworks
 The state of frontend JavaScript frameworks has been subject to a lot of ridicule over the past few years. Among the critiques are the articles on [JavaScript Fatigue], [this website] and a [JavaScript drinking game].
 
-A few quotes really drive the point home.
+The community is also an excellent source of mildly suppressed irritation.
 
 ```
-#!english
 There are no best practices. There's just different clumps of tech that other people have settled on using.
 ```
 
 ```
-#!english
 You are in the room of web apps.
 make web app
 You need to select a platform first to make a web app. You see doors named Unity, GameMaker, NW.js, Electron, Cordova, and Browser.
@@ -220,7 +221,7 @@ rm -rf /
 
 #### State-of-the-art
 
-As of 2017, client-side web frameworks are volatile, but stabilizing. In theory you have hundreds of options, but only a few of them are sufficiently modern and established.
+It's not all bad news. As of 2017, client-side web frameworks are volatile, but stabilizing. In theory you have hundreds of options, but only a few of them are sufficiently modern and established.
 
 -   [Angular 2]
 -   [EmberJS]
@@ -288,6 +289,19 @@ Similar to the term “Web 2.0”, people often use “HTML5” as a buzzword to
 
 The truth is, HTML5 is just the latest HTML standard. Essentially, it's a bag of convenience methods to simplify layouts. The most powerful new feature is the canvas element. If you are using HTML5 features, make sure you check the [compatibility list] and set the right DOCTYPE. That's all there is to it.
 
+#### Testing
+
+How you write unit tests, depends on which framework you are using. Look for the relevant documentation elsewhere. 
+
+For end-to-end tests, there is a library called [Selenium]. It is a fair amount of work to get it up and running, but it works excellently for use case tests. For Unix machines, use Chrome with [Xvfb] in favor of [PhantomJs], which is known to cause compatibility problems.
+
+An honorable metion is [Cucumber.js], which can help for readability and use-case documentation. 
+
+  [Selenium]: https://en.wikipedia.org/wiki/Selenium_(software)
+  [Cucumber.js]: https://github.com/cucumber/cucumber-js
+  [Xvfb]: http://elementalselenium.com/tips/38-headless
+  [PhantomJs]: http://phantomjs.org/
+
 #### Package managers
 
 Most frontend projects are packaged using [Node.js] and its package manager [npm]. Build dependencies are managed in the file package.json. Some like to use [bower] for dependency management, separating the build dependencies from the deployed dependencies. Note that [npm can do everything that bower can], so save yourself the effort.
@@ -350,7 +364,22 @@ Version control allows you to roll back code to a previous version, view changes
   [Subversion (SVN)]: https://subversion.apache.org/
 
 ### Documentation
-TODO
+
+Documentation is a guide for other people, who want to understand your code and write some themselves. Ideally, you want as little documentation as possible to sufficiently answer the why-question. If you can avoid writing documentation by cleaning up your code, do it! Good naming conventions can often [replace comments entirely]. The same goes for docstrings. Generated documentation can help for external interfaces, e.g. [Swagger] APIs. Unit tests can provide examples for internal APIs; end-to-end tests with [Cucumber.js] can help reduce the need for separate business requirements.
+
+Good commit messages can help keep track of changes. Make sure you add a link to an issue tracker such as [Jira] or [Trello]. The issue tracker can provide further information about the intent of your change.
+
+Even when the code quality is excellent and your tickets are perfectly written, there is still some information you want to store separately. For example, your workflow, responsibilities, contact persons, architecture and design decisions. If you are rigorous about this, it will lighten the mental load for developers and simultaneously solve problems when a key person is unavailable. 
+
+To store documentation, people tend to use separate Office documents or a wiki. The downside of Office documents is that they do not work well with version control. They are also hard to search through once you get a number of them, often leading to duplicate, conflicting and out-of-date information. Wikis work better because their pages can point to each other. Each page can stay small and self-contained, which makes them much easier to update. Wikis also have search engines that allow you to search for an existing page before writing a new one. [MediaWiki] and [Confluence] are popular choices for wikis.
+
+Sometimes, customers or end users want additional documentation in the form of user manuals. This may be a sign that your application's user experience can be improved. Perhaps the UI is not clear enough, or you can add a webpage with instructions. Writing a separate manual may help, but it is a lot of work to update and distribute.
+
+  [replace comments entirely]: http://blog.pragmaticengineer.com/a-comment-is-an-invitation-for-refactoring/
+  [MediaWiki]: https://www.mediawiki.org/wiki/MediaWiki
+  [Confluence]: https://www.atlassian.com/software/confluence
+  [Jira]: https://www.atlassian.com/software/jira
+  [Trello]: https://trello.com/
 
 ## Implementation
 

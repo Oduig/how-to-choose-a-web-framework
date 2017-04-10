@@ -2,9 +2,6 @@
 
 *A quickstart guide to making well-founded design choices for web applications.*
 
-- Documentation
-- Links
-
 ## Motivation
 
 The first public website went online in 1991 at CERN, Switzerland. Since then, the web has come a long way. What used to be a platform for academic information, is now so wide-spread that it has effectively replaced paper.
@@ -43,9 +40,10 @@ The truth is, the web is a moving platform. You can be almost guaranteed that so
 			4. [Alternatives to JavaScript](./designing-for-the-web.md#alternatives-to-javascript)
 			5. [Style sheets](./designing-for-the-web.md#style-sheets)
 			6. [HTML5](./designing-for-the-web.md#html5)
-			7. [Package managers](./designing-for-the-web.md#package-managers)
-			8. [Build systems](./designing-for-the-web.md#build-systems)
-			9. [Folder structure](./designing-for-the-web.md#folder-structure)
+			7. [Testing](./designing-for-the-web.md#testing)
+			8. [Package managers](./designing-for-the-web.md#package-managers)
+			9. [Build systems](./designing-for-the-web.md#build-systems)
+			10. [Folder structure](./designing-for-the-web.md#folder-structure) 
 		7. [Deployment infrastructure](./designing-for-the-web.md#deployment-infrastructure)
 		8. [Version control](./designing-for-the-web.md#version-control)
 		9. [Documentation](./designing-for-the-web.md#documentation)
@@ -61,4 +59,7 @@ we might even tackle the biggest challenge of them all: keeping a guide on web t
 ## Contact
 I am Guido Josquin, a full-stack web engineer at a software consultancy bureau in Eindhoven, The Netherlands. Lately, we see more and more customers asking for experience in web technology and we wanted to expand our knowledge in the area. We hope to use this article as a framework (pun intended) for future web projects and new developers.
 
-Feel free to contact me via GitHub or LinkedIn. 
+Feel free to contact me via [GitHub] or [LinkedIn].
+
+  [GitHub]: https://github.com/Oduig/untangling-the-web
+  [LinkedIn]: https://www.linkedin.com/in/guido-josquin-60429643/ 
