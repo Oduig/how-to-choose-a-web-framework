@@ -2,23 +2,28 @@
 
 Looking at trends over the last couple of years, we can make some predictions about where the web is going.
 
-### Web components
-Many websites today reinvent the wheel while implementing UIs. They make their own form controls and widgets and embed them in their pages in a not-so-reusable fashion.
+## Web components
 
-A trend in the latest web frameworks is the appearance of [web components](http://webcomponents.org/). Web components are small pieces of layout and behavior that can be reused across multiple pages. They provide a very [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) way to organize layout. A major selling point is that developers could share or sell their UI controls on online marketplaces. This in turn is a huge boon for drag-and-drop website creation tools.
+Most companies today are reinventing the wheel every time they make a new web UI. They roll their own form controls, widgets and layout, embedding them in their pages in a non-reusable fashion. A recent trend is the appearance of [web components]. Web components are small pieces of layout and behavior that can be reused across multiple pages. For example: a [datepicker].
 
-Although the official standard is still a long way from being used in production, the idea has taken off and is already widely used in the newest generation of frameworks. React goes even further, because their version of web components *forces* you to make them reusable.
+Components provide a very [DRY] way to organize the UI. Once this method becomes a standard, developers could share or even sell their UI controls on online marketplaces. This is a huge benefit for developers as well as drag-and-drop website creation tools.
 
-Further ahead, the [Polymer](https://www.polymer-project.org/1.0/) framework by Google showcases web components as described by the spec, using polyfills to implement the missing browser features. It is not established enough for projects in production, but it's a glimpse of things to come. 
+Although the official standard is still a long way from being used in production, the idea has taken off and is already widely used in the newest generation of frameworks. React for example makes it obligatory to split a page into reusable components. The [Polymer] framework by Google showcases web components as described by the spec, using polyfills to implement the missing browser features. It is not yet suitable for production in my opinion, but it’s a glimpse of things to come.
 
-### Other languages in the browser
-Browser vendors are finally aligning their efforts to improve the standards behind JavaScript. Slowly, we are starting to see a more professional environment with modern language features and fewer quirks.
+## Other languages in the browser
 
-At the same time, there are also a few popular alternatives to JavaScript, like TypeScript and CoffeeScript. There is an inititiative for [asmjs](http://caniuse.com/#feat=asmjs), a high-performance subset of JavaScript used as a compilation target. In time, we can expect more and more languages to compile to JS. The new languages may be very useful to those running a backend in a different language. Keep in mind that interoperability with existing JavaScript libraries is a must. You don't want to reinvent all the wheels.
+Traditionally, people tried to solve limitations in JavaScript by inventing “precursor” languages like TypeScript and CoffeeScript. Precursors always have to be compiled to plain JavaScript, which limits the flexibility of the source language. Browser vendors are about to make this easier with the introduction of [Web Assembly], a high-performance assembly language that can run in the browser.
 
-As for layout, HTML and CSS seem to be fairly static. Developments related to page layout mostly occur within individual frameworks, offering extra features such as data binding or a virtual DOM. In the style department, SASS seems to be king. Some work is being done to improve HTML and CSS, but no big shifts are happening there. 
+In time, we can expect languages other than JavaScript to compile to Web Assembly. This will launch a new wave of web frameworks that run the same language in the frontend and backend. Currently, this is only really being done with JavaScript and Node.JS, but soon you might be able to run a full web stack in Python. For typed languages like C\# and Java, existing JavaScript libraries (also compiled to web assembly) likely need to be imported dynamically or hidden behind a typed interface. TypeScript already does this (search for *@types* or *typings*), so we can expect others to follow suit.
 
-### Web goes mobile
+On the topic of layout, HTML and CSS seem to be going nowhere soon. Improvements in HTML occur mostly within individual frameworks: they offer extra features such as data binding or a virtual DOM, and generate the resulting HTML on the fly. In the style department, SASS seems to be king as the go-to precursor for CSS.
 
-If you have a website and you need an app, there are several options: write native apps, use Xamarin to cover all platforms, or use a web-to-mobile framework. These frameworks can embed your website in an app, and allow you to access native functionality such as the accelerometer and the user's contacts. Examples are Cordova, React Native, Ionic and Meteor. 
-Using web technologies on phones is a relatively new idea. As I have not yet tried any of these frameworks, I cannot offer any recommendations. Sorry! ;-)
+## Web goes mobile
+
+If you have a website and you need an app, there are several options: write native apps, use Xamarin to cover all platforms, or use a web-to-mobile framework. These frameworks can embed your website in an app, and allow you to access native functionality such as the accelerometer and the phone's contacts. Examples are Cordova, React Native, Ionic and Meteor. Using web technologies on phones is a relatively new thing. As the author, I have not yet tried any of these frameworks and I cannot offer any reliable recommendations. If you can, please do! :-)
+
+  [web components]: http://webcomponents.org/
+  [datepicker]: https://github.com/christopheclc/polymer-date-picker
+  [DRY]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+  [Polymer]: https://www.polymer-project.org/1.0/
+  [Web Assembly]: http://webassembly.org/
